@@ -1,11 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+const path = require('path');
 module.exports = {
-  // Reuse our shared brand tokens (colors, fonts) per source-of-truth
-  presets: [require('../shared/tailwind.preset.js')],
-  // Scan EJS views and any client JS for class names
   content: [
-    './views/**/*.ejs',
-    './**/*.ejs',
-    './public/**/*.js'
-  ]
+    path.join(__dirname, 'views/**/*.ejs'),
+    path.join(__dirname, '**/*.ejs'),
+    path.join(__dirname, 'public/**/*.js')
+  ],
+  theme: {
+    extend: {
+      colors: {
+        brand: { primary: '#e49424', secondary: '#ec9c34', dark: '#590e0e' },
+        neutral: { 700: '#3b271c', 500: '#887b6c', 300: '#c9a28e' }
+      },
+      fontFamily: {
+        sans: ['Helvetica','ui-sans-serif','system-ui','Arial','sans-serif'],
+        serif: ['Garamond','ui-serif','Georgia','serif']
+      }
+    }
+  },
+  plugins: []
 };
