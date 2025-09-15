@@ -6,5 +6,10 @@
     "staff-app",
     "admin-app",
     "shared"
-  ]
+  ],
+  "scripts": {
+    "dev:css:guest": "./tools/tailwindcss.exe -c guest-app/tailwind.config.js -i guest-app/src/styles/tailwind.css -o guest-app/public/css/app.css --watch",
+    "dev:css:staff": "./tools/tailwindcss.exe -c staff-app/tailwind.config.js -i staff-app/src/styles/tailwind.css -o staff-app/public/css/app.css --watch",
+    "dev:css:admin": "./tools/tailwindcss.exe -c admin-app/tailwind.config.js -i admin-app/src/styles/tailwind.css -o admin-app/public/css/app.css --watch"
+  }
 }
