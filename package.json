@@ -1,0 +1,10 @@
+{
+  "name": "qsys-queueing-system",
+  "private": true,
+  "workspaces": [
+    "guest-app",
+    "staff-app",
+    "admin-app",
+    "shared"
+  ]
+}
